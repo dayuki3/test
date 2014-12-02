@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title> New Document </title>
+	<style>
+		/* 앱스토어 팝업 */
+.fog{display:none; overflow:hidden;position:fixed;left:0;top:0;width:100%;height:100%;background-color:#000;opacity:0.7;filter:alpha(opacity=50);z-index:100}
+.outer_nav_app{position:relative; top:50%; left:0; margin-top:-150px; overflow:hidden; padding:0 14px; text-align:center}
+.wrap_nav_app{display:none; position:relative; height:301px; border-radius:5px; z-index:101; background: #d8eaf6;
+background: -moz-linear-gradient(bottom, #d8eaf6 0%, #d8eaf6 60%, #eef6fc 90%);
+background: -webkit-gradient(linear, left botto, left top, color-stop(0%,#d8eaf6), color-stop(60%,#d8eaf6), color-stop(90%,#eef6fc));
+background: -webkit-linear-gradient(bottom, #d8eaf6 0%,#d8eaf6 60%,#eef6fc 90%);
+background: -o-linear-gradient(bottom, #d8eaf6 0%,#d8eaf6 60%,#eef6fc 90%);
+background: -ms-linear-gradient(bottom, #d8eaf6 0%,#d8eaf6 60%,#eef6fc 90%);
+background: linear-gradient(to top, #d8eaf6 0%,#d8eaf6 60%,#eef6fc 90%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eef6fc', endColorstr='#d8eaf6',GradientType=0 )}
+.wrap_nav_app .copy{display:inline-block; margin: 35px 0 10px; width:182px;height:38px;background-position:-80px 0}
+.wrap_nav_app .sect_dtl{height:18px; text-align:center}
+.wrap_nav_app .lnk_dtl{display:inline-block; padding:4px 0 6px 2px; font-size:9px; line-height:9px; color:#69727a}
+.wrap_nav_app .ico_dtl{display:inline-block; margin-left:1px; width:16px; height:8px; background-position:-61px -83px}
+.wrap_nav_app .ico_app{display:inline-block; position:absolute; top:0; left:50%; margin:116px 0 0 -39px; width:78px; height:78px; background-position:0 0; border-radius:12px; box-shadow:0px -18px 75px #F2F8FD, 0 0 60px #FFF, 0 14px 80px #F2F8FD}
+.wrap_nav_app .sect_inst{position:absolute; width:100%; bottom:0}
+.wrap_nav_app .sect_inst .lnk_nav{padding:12px 15px 10px; height:21px; background-color:#11c04f; margin-bottom:1px; text-align:left}
+.wrap_nav_app .sect_inst .ico_nav{display:inline-block; float:left; width:21px; height:21px; background-position:0 -78px}
+.wrap_nav_app .sect_inst .inst_nav{display:inline-block; margin:5px 7px; width:134px; height:12px; background-position:-80px -40px}
+.wrap_nav_app .sect_inst .lnk_ggl{padding:11px 15px 11px; height:21px; background-color:#5192f2; border-bottom-left-radius:5px; border-bottom-right-radius:5px; text-align:left}
+.wrap_nav_app .sect_inst .ico_ggl{display:inline-block; float:left; width:21px; height:21px; background-position: -22px -78px;}
+.wrap_nav_app .sect_inst .inst_ggl{display:inline-block; margin:4px 7px; width:110px; height:12px; background-position:-80px -54px}
+.wrap_nav_app .btn_clspop{position:absolute; top:0; right:0; height:14px; padding:7px 7px 9px 9px}
+.wrap_nav_app .btn_clspop span{display:inline-block; width:14px; height:14px; background-position:-44px -81px}
+
+
+*{margin:0;padding:0;font-family:Helvetica;-webkit-text-size-adjust:none}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-size:14px;line-height:1.25em}
+body.s,.s input,.s textarea,.s select,.s button,.s table{font-family:Helvetica}
+body{position:absolute;height:100%;width:100%;background-color:#f4f4f4;color:#000;-webkit-text-size-adjust:none}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse}
+hr{display:none !important}
+.blind{display:block; position:absolute;overflow:hidden;*position:absolute;top:0;left:0;width:0;height:0;border:0;background:none;font-size:0;line-height:0}
+	</style>
+</head>
+<body>
+<!-- [D] 안드로이드인 경우, 앱 설치 버튼을 눌렀을 때 앱 스토어 팝업 노출 -->
+	<div class="fog" style="display:block"></div><!-- [D] fog에 터치 인식되면 .fog, .wrap_nav_app display:none해주세요 -->
+<div class="outer_nav_app"> 
+	<div class="wrap_nav_app" style="display:block">
+		<p class="sp_app copy"><span class="blind">이제 앱 다운로드는 믿을 수 있는 앱 스토어에서!</span></p>
+		<div class="sect_dtl">
+			<a href="" title="새 창" class="lnk_dtl">
+				자세히 보기<span class="sp_app ico_dtl"></span>
+			</a>
+		</div>
+		<div class="sp_app ico_app"></div>
+		<div class="sect_inst">
+			<a href="" title="새 창">
+				<div class="lnk_nav">
+					<span class="sp_app ico_nav"></span>
+					<span class="sp_app inst_nav"><i class="blind">앱스토어에서 설치하기</i></span>
+				</div>
+			</a>
+			<a href="" title="새 창">
+				<div class="lnk_ggl">
+					<i class="sp_app ico_ggl"></i>
+					<span class="sp_app inst_ggl"><i class="blind">구글플레이에서 설치하기</i></span>
+				</div>
+			</a>
+		</div>
+		<a href="#" class="btn_clspop" onclick="viewPop()"><span class="sp_app"><i class="blind">닫기</i></span></a>
+	</div>
+</div>
+<!-- //[D] 앱 스토어 팝업 끝 -->
+</body>
+</html>

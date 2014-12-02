@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> New Document </title>
+  <style>
+	html, body, div, ul, li{padding:0; margin:0;}
+	ul, li{list-style:none}
+	a {text-decoration:none}
+	.section{min-width:320px; position:absolute; margin-bottom:10px; border-top:1px solid #333; border-bottom:1px solid #333}
+	.section.tab1{top:0; left:0}
+	.section.tab2{top:70px; left:0; width:100%}
+
+	div.tab1{display:table; border-bottom:1px solid blue; width:100%}
+	.tab1 ul{display:table-row; border:1px solid green}
+	.tab1 li{display:table-cell; border-left:1px solid red; text-align:center; padding:10px; }
+	.tab1 li:first-child{border:0}
+
+	div.tab2{}
+	div.tab2 span{display:inline-block; width:100%}
+	div.tab2 span a{float:left; width:25%; padding:10px 0; display:block; border-right:1px solid green; text-align:center}
+	div.tab2 span a:nth-child(4){width:auto; float:none; overflow:hidden; border-right:0}
+  </style>
+ </head>
+
+ <body>
+	<div class="section tab1">
+		<ul>
+		<li>test1</li>
+		<li>test222</li>
+		<li>test33</li>
+		<li>test444444</li>
+		</ul>
+	</div>
+
+	<div class="section tab2">
+		<span>
+			<a href="#">test1</a>
+			<a href="#">test222</a>
+		</span>
+		<br/>
+		<span>
+			<a href="#">test1</a>
+			<a href="#">test222</a>
+			<a href="#">test33</a>
+		</span>
+		<br/>
+		<span>
+			<a href="#">test1</a>
+			<a href="#">test222</a>
+			<a href="#">test33</a>
+			<a href="#">test4444</a>
+		</span>
+	</div>
+ </body>
+</html>

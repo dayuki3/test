@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, minimal-ui" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title> New Document </title>
+</head>
+<body ondevicemotion="alert('moving!!')">
+	<h1>모션 체크 테스트</h1>
+	<br/><br/>
+	<strong>위 아래로 흔들 때 정수부 숫자가 변합니다</strong><br/>(....보기는 힘들지만)<br/>
+	위로 올리면 양수, 아래로 내리면 음수
+	<div id="acceleration"></div>
+	<br/><br/>
+	<strong>좌우로 기울일 때 앞의 정수부 숫자가 변합니다.</strong><br/>
+	왼쪽은 음수, 오른쪽은 양수
+	<div id="acceleration-gravity"></div>
+	<script>
+	// Reference page elements for dropping current device acceleration values into
+ 
+	var accElem = document.getElementById('acceleration'),
+    accGravityElem = document.getElementById('acceleration-gravity'),
+ 
+// Define an event handler function for processing the device’s acceleration values
+ 
+    handleDeviceMotionEvent = function(e) {
+ 
+        // Get the current acceleration values in 3 axes and find the greatest of these
+ 
+        var acc = e.acceleration,
+            maxAcc = Math.max(acc.x, acc.y, acc.z),
+ 
+        // Get the acceleration values including gravity and find the greatest of these
+ 
+            accGravity = e.accelerationIncludingGravity,
+            maxAccGravity = Math.max(accGravity.x, accGravity.y, accGravity.z);
+ 
+        // Output to the user the greatest current acceleration value in any axis, as
+        // well as the greatest value in any axis including the effect of gravity
+ 
+        accElem.innerHTML = 'Current acceleration: ' + maxAcc +  'm/s^2';
+        accGravityElem.innerHTML = 'Value incl. gravity: ' + maxAccGravity + 'm/s^2';
+    };
+ 
+// Assign the event handler function to execute when the device is moving
+ 
+window.addEventListener('devicemotion', handleDeviceMotionEvent, false);
+	</script>
+</body>
+</html>
