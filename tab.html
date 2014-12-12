@@ -6,7 +6,7 @@
 	html, body, div, ul, li{padding:0; margin:0;}
 	ul, li{list-style:none}
 	a {text-decoration:none}
-	.section{min-width:320px; position:absolute; margin-bottom:10px; border-top:1px solid #333; border-bottom:1px solid #333}
+	.section{min-width:320px; margin-bottom:10px; border-top:1px solid #333; border-bottom:1px solid #333}
 	.section.tab1{top:0; left:0}
 	.section.tab2{top:70px; left:0; width:100%}
 
@@ -19,6 +19,12 @@
 	div.tab2 span{display:inline-block; width:100%}
 	div.tab2 span a{float:left; width:25%; padding:10px 0; display:block; border-right:1px solid green; text-align:center}
 	div.tab2 span a:nth-child(4){width:auto; float:none; overflow:hidden; border-right:0}
+
+	div.tab3{}
+	div.tab3 a{display:block}
+	div.tab3 span{display:inline-block; width:100%}
+	div.tab3 span span{float:right; width:25%; padding:10px 0; display:block; border-left:1px solid green; text-align:center}
+	div.tab3 span span:nth-child(2){width:auto; float:none; overflow:hidden; border-left:0}
   </style>
  </head>
 
@@ -51,5 +57,15 @@
 			<a href="#">test4444</a>
 		</span>
 	</div>
+
+	<div class="section tab3">
+		<a href="#">
+			<span>
+				<span>test1</span>
+				<span>test222</span>
+			</span>
+		</a>
+	</div>
+
  </body>
 </html>
