@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title> New Document </title>
+	<script src="js/jindo.desktop.ns.min.js"></script>
+	<script src="js/jindo_mobile_component.js"></script>
+	<style>
+	#mflick{overflow:hidden;position:relative;width:100%;height:200px}
+	.flick-container{clear:both}
+	.flick-panel{float:left;position:absolute;width:100%;height:100%}
+	</style>
+</head>
+<body>
+<div id="mflick">
+    <div class="flick-container">
+        <div id="layer1" class="flick-panel" style="background-color:pink">
+            Layer 1
+        </div>
+        <div id="layer2" class="flick-panel" style="background-color:skyblue">
+            Layer 2
+        </div>
+        <div id="layer3" class="flick-panel" style="background-color:yellow">
+            Layer 3
+        </div>
+    </div>
+</div>
+</section>
+<script>
+	var oFlicking = new jindo.m.CircularFlicking(jindo.$('mflick'),{
+		nDuration : 200
+	});
+	oFlicking.attach({
+		'afterFlicking' : function(oCustomeEvt){
+			//oCustomeEvt.nPanelIndex 플리킹 이후 화면에 보이는 Panel 인덱스
+		}
+	});
+
+
+</script>
+</body>
+</html>
