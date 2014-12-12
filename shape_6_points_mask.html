@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title> New Document </title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://view.gitlab.uit.nhncorp.com/jeonseol/test/raw/master/js/redirection.js"></script>
+	<script type="text/javascript" src="http://view.gitlab.uit.nhncorp.com/jeonseol/test/raw/master/js/commonfortest.js"></script>
+</head>
+<body>
+<style>
+	.element{
+		overflow: hidden;
+		background-repeat: no-repeat;
+		-webkit-mask-image: url(img/mask.png);
+		-webkit-mask-repeat: no-repeat;
+	}
+	.element.t1{
+		width: 146px;
+		height: 146px;
+		background-image: url(img/3.jpg);
+		background-size: auto 146px;
+		-webkit-mask-size: auto 146px;
+	}
+	.element.t2{
+		width: 180px;
+		height: 200px;
+		background-image: url(img/2.jpg);
+		background-size: auto 200px;
+		-webkit-mask-size: auto 200px;
+	}
+	.element p{margin:0; color:#fff; font-size:20px; font-weight:bold}
+
+	.element.t2{position:relative;overflow:hidden;-webkit-mask-image:url(img/mask.png);
+		-webkit-mask-repeat:no-repeat;background-repeat:no-repeat;color:transparent}
+
+	.element.t2:after{display:block;overflow:hidden;position:absolute;left:0;top:0;
+		background:url(img/mask_border.png) no-repeat;opacity:.3;content:'';
+		width:180px; height:200px; background-size:179px auto;
+	}
+
+</style>
+<div class="element t1">
+		<p>TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+			TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+			TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+			TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+			TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+			TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+			TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+		</p>
+</div>
+<div class="element t2"></div>
+
+</body>
+</html>
